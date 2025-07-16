@@ -23,7 +23,7 @@ jobs:
     name: my workflow
     runs-on: ubuntu-latest
     steps:
-      - name: checkout code
+      - name: checkout code1
         uses: actions/checkout@v3
 
       - name: Set up Docker Buildx
