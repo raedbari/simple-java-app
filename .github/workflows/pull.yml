@@ -39,5 +39,5 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: <raedbari>/java-app:$GITHUB_REF
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/java-app:${{ github.ref_name }}
 
