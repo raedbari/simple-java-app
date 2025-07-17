@@ -96,6 +96,6 @@ jobs:
           aws-region: us-east-2
       - name: deploy to k8s
         run: |-
-          aws eks update-kubeconfig --region us-east-2 --name eks
+          aws eks update-kubeconfig --region us-east-2 --name attractive-hiphop-crow
           kubectl apply -f ./k8s/deployment.yaml
 
