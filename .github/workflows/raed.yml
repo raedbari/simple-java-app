@@ -60,3 +60,23 @@
 #           push: true
 #           tags: <raedbari>/java-app:$GITHUB_REF
 
+name: ci workflow
+on: 
+  pull_request:
+    branches:
+     - "main"
+jobs:
+ ci workflow:
+   name: ci workflow
+   runs-on: ubuntu-latest
+   steps:
+    - name: before checkout
+      uses: actions/checkout@v3
+    - name: build app 
+      run: "mvn clean package"
+      shell: bash 
+
+    - name: after checkout
+      run: "mvn test"
+      shell: bash
+   
